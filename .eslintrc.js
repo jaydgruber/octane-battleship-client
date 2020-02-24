@@ -8,13 +8,12 @@ module.exports = {
       legacyDecorators: true
     }
   },
-  plugins: [
-    'ember'
-  ],
+  plugins: ['ember'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
-    'plugin:ember/octane'
+    'plugin:ember/octane',
+    'plugin:prettier/recommended'
   ],
   env: {
     browser: true
