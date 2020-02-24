@@ -10,4 +10,12 @@ export default class BoardComponent extends Component {
   get size() {
     return this.args.size || this.DEFAULT_SIZE;
   }
+
+  getLetterByIndex(index) {
+    return String.fromCharCode(65 + index); // charCode 65 = 'A'
+  }
+
+  get rows() {
+    return [...Array(this.size)].map((_, index) => this.getLetterByIndex(index));
+  }
 }

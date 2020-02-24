@@ -1,1 +1,9 @@
-{{this.size}}
+<h5>Size:</h5>
+<span class="size">{{this.size}}</span>
+
+<h5>Rows:</h5>
+<ul class="rows">
+  {{#each this.rows as |row|}}
+    <li class="row">{{row}}</li>
+  {{/each}}
+</ul>
