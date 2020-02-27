@@ -1,0 +1,21 @@
+<table class="board">
+  <thead>
+    <tr>
+      <th></th>
+      {{#each this.rows as |row|}}
+        <th class="text-center">{{row}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.rows as |row index|}}
+      <tr>
+        <th class="text-center">{{index}}</th>
+        {{#each this.cols as |col|}}
+          <td>
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
