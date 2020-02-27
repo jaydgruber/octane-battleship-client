@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 /* special styles for battleship svgs */
-.battleship {
+.battleship-svg {
   fill: steelblue;
   position: absolute;
   filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .2));
   transform: translate(-20px, -16px) rotate(-3deg);
 }
-.battleship.small {
+.battleship-svg.small {
   transform: scaleX(-1) scale(0.5) translate(-460px, -16px) rotate(-3deg);
 }
 
