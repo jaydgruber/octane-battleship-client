@@ -8,11 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    {{#each this.rows as |row index|}}
+    {{#each this.rows as |row r|}}
       <tr>
-        <th class="text-center">{{get this.cols index}}</th>
-        {{#each this.cols as |col|}}
-          <td>
+        <th class="text-center">{{get this.cols r}}</th>
+        {{#each this.cols as |col c|}}
+          <td class="w-8 h-8 {{if (and (eq c 1) (eq r 4)) "bg-red-600" "bg-white"}}">
           </td>
         {{/each}}
       </tr>
