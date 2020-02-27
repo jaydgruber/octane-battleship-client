@@ -26,7 +26,7 @@
 }
 .battleship {
   fill: steelblue;
-  position:absolute;
+  position: absolute;
   transform: translate(-20px, -20px) rotate(-2deg);
 }
 .battleship.small {
