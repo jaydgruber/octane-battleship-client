@@ -14,6 +14,6 @@ export default class BoardComponent extends Component {
     return [...Array(this.size)].map((_, index) => this.getLetterByIndex(index));
   }
   get cols() {
-    return [...Array(this.size)];
+    return [...Array(this.size)].map((_, index) => index + 1);
   }
 }
