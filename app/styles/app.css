@@ -1,0 +1,26 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.text-skew {
+  transform: translate(0%, -30%) skewY(-5deg);
+  transform-origin: bottom right;
+}
+.text-rise {
+  text-shadow: 1px 1px 0 white,
+               2px 2px 0 white,
+               3px 3px 0 white,
+               4px 4px 0 white,
+               5px 5px 0 lightblue;
+}
+.text-shadow {
+  text-shadow: 1px 1px 0 steelblue,
+               -0.2px -0.2px 0 steelblue;
+}
+.text-shadow > li > a:hover {
+  text-shadow: 1px 1px 0 steelblue,
+               2px 2px 0 steelblue,
+               -0.5px -0.5px steelblue;
+}
