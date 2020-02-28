@@ -1,0 +1,8 @@
+<nav class="flex">
+  <ul class="flex flex-col sm:flex-row items-end justify-end pr-2 sm:text-xl w-screen bg-blue-500 text-white text-shadow">
+    <li><LinkTo @route="game" class="p-4 sm:py-2 py-0 px-0 block">New Game</LinkTo></li>
+    <li><a href="#" class="p-4 sm:py-2 py-0 block">Rules</a></li>
+    <li><a href="#" class="p-4 sm:py-2 py-0 block">About</a></li>
+    {{yield}}
+  </ul>
+</nav>

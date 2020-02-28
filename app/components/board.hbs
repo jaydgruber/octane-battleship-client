@@ -1,0 +1,21 @@
+<table class="m-6 box-shadow-blue outline-blue-md">
+  <thead>
+    <tr>
+      <th></th>
+      {{#each this.rows as |row|}}
+        <th class="text-center select-none p-1">{{row}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.rows as |row r|}}
+      <tr>
+        <th class="text-center select-none p-1">{{get this.cols r}}</th>
+        {{#each this.cols as |col c|}}
+          <td class="outline-blue-sm w-8 h-8 {{if (and (eq c 1) (eq r 4)) "bg-red-600" "bg-white"}}">
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
