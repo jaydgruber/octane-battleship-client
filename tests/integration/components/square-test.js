@@ -20,6 +20,7 @@ module('Integration | Component | square', function(hooks) {
     {
       name: 'empty',
       expectedClass: classes[stateEnum.empty],
+      firedAssertion: 'doesNotIncludeText',
       row: 0,
       column: 0,
       ships: [[0]],
@@ -29,6 +30,7 @@ module('Integration | Component | square', function(hooks) {
     {
       name: 'ship, shouldShowShip=false, miss',
       expectedClass: classes[stateEnum.miss],
+      firedAssertion: 'includesText',
       row: 0,
       column: 0,
       ships: [[1]],
@@ -38,6 +40,7 @@ module('Integration | Component | square', function(hooks) {
     {
       name: 'ship, shouldShowShip=false, hit',
       expectedClass: classes[stateEnum.hit],
+      firedAssertion: 'includesText',
       row: 0,
       column: 0,
       ships: [[1]],
@@ -47,6 +50,7 @@ module('Integration | Component | square', function(hooks) {
     {
       name: 'ship, shouldShowShip=true, miss',
       expectedClass: classes[stateEnum.miss],
+      firedAssertion: 'includesText',
       row: 0,
       column: 0,
       ships: [[1]],
@@ -56,6 +60,7 @@ module('Integration | Component | square', function(hooks) {
     {
       name: 'ship, shouldShowShip=true, hit',
       expectedClass: classes[stateEnum.hit],
+      firedAssertion: 'includesText',
       row: 0,
       column: 0,
       ships: [[1]],
@@ -63,7 +68,7 @@ module('Integration | Component | square', function(hooks) {
       shouldShowShip: true
     }
   ];
-  testCases.forEach(({ name, expectedClass, ...props }) => {
+  testCases.forEach(({ name, expectedClass, firedAssertion, ...props }) => {
     test(name, async function(assert) {
       setProperties(this, props);
       await render(hbs`
@@ -77,6 +82,7 @@ module('Integration | Component | square', function(hooks) {
       `);
 
       assert.dom('td').hasClass(expectedClass);
+      assert.dom('td')[firedAssertion]('X');
     });
   });
 });
