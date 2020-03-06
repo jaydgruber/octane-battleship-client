@@ -17,10 +17,11 @@ export default class SquareComponent extends Component {
 
   constructor() {
     super(...arguments);
-    const { ships, row, column } = this.args;
+    const { ships, shots, row, column } = this.args;
     assert('row {Number} is required', Number.isInteger(row));
     assert('column {Number} is required', Number.isInteger(column));
     assert('ships {Array} is required', Array.isArray(ships));
+    assert('shots {Array} is required', Array.isArray(shots));
   }
 
   get state() {
