@@ -9,6 +9,7 @@ export default class SquareComponent extends Component {
    * @property row {Number} - the y coordinate of this square in the game board
    * @property column {Number} - the x coordinate of this square in the game board
    * @property ships {Array} - a [row] x [column] 2d array
+   * @property shots {Array} - a [row] x [column] 2d array
    *
    * optional
    * @property shouldShowShip {Boolean}(default = false)
