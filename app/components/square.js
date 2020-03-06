@@ -34,4 +34,8 @@ export default class SquareComponent extends Component {
     const backgroundClasses = ['bg-blue-300', 'bg-gray-400', 'bg-white', 'bg-red-500'];
     return backgroundClasses[this.state];
   }
+
+  get hasBeenFiredUpon() {
+    return this.state > 1;
+  }
 }
