@@ -8,11 +8,9 @@ module('Integration | Component | header', function(hooks) {
 
   test('it renders', async function(assert) {
     await render(hbs`
-      <Header>
-        template block text
-      </Header>
+      <Header />
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('svg').isVisible();
   });
 });

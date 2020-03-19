@@ -1,4 +1,4 @@
 #!/bin/sh
 
-npx lint-staged
+npm run test
 exit $?
